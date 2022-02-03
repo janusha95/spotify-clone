@@ -56,7 +56,7 @@ function Center() {
         </div>
       </header>
       <section
-        className={`padding-8 flex h-80 w-full items-end space-x-7 bg-gradient-to-b ${color} to-black text-white`}
+        className={`flex h-80 w-full items-end space-x-7 bg-gradient-to-b p-8 ${color} to-black text-white`}
       >
         <img
           className="h-44 w-44 shadow-2xl"
