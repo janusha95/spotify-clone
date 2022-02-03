@@ -25,6 +25,8 @@ function Center() {
   const playlistId = useRecoilValue(playlistIdState)
   const [playlist, setPlaylist] = useRecoilState(playlistState)
 
+  console.log(playlistId)
+
   useEffect(() => {
     setColor(shuffle(colors).pop())
   }, [playlistId])
@@ -43,7 +45,7 @@ function Center() {
   return (
     <div className="flex-grow">
       <header className="absolute top-5 right-8">
-        <div className="hover:opacity-800 flex cursor-pointer items-center space-x-3 rounded-full bg-red-300 p-1 pr-2 opacity-90 hover:opacity-80 ">
+        <div className="hover:opacity-800 flex cursor-pointer items-center space-x-3 rounded-full bg-black p-1 pr-2 text-white opacity-90 hover:opacity-80 ">
           <img
             className="h-10 w-10 rounded-full"
             src={session?.user.image}
@@ -62,7 +64,7 @@ function Center() {
           alt=""
         />
         <div>
-          <p>CURRENT PLAYLIST</p>
+          <p>Current Playlist</p>
           <h1 className="text-2xl font-bold md:text-3xl xl:text-5xl">
             {playlist?.name}
           </h1>
